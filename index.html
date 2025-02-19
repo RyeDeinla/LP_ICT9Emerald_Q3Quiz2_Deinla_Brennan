@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>  </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"; rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body style="background-color: black;">
+
+    <h2 style="background-color: red; color: white;"> Riot Games </h2>
+
+    <div class="container">
+
+        <h1 style="border-radius: 12px; background-color: blueviolet; color:white; text-align: center;"> VCT Masters Bangkok Ticketing Center </h1>
+
+        <br>
+
+        <details style="color: white; text-align: center;"> 
+
+            <summary> Personal Information </summary> 
+
+            <br>
+
+            <i> Fill out the form below. </i>
+
+            <br>
+
+            <br>
+
+            <form>
+
+                <label for="name"> Name: </label>
+
+                <input type="text" id="name">
+
+                <label for="email"> Email: </label>
+
+                <input type="text" id="email">
+
+                <br>
+                
+                <br>
+
+                <button type="button"> Submit Info </button>
+
+            </form>
+
+        </details>
+
+            <br> 
+
+            <br>
+
+        <details style="color: white; text-align: center;">
+
+            <summary> Ticket Prices </summary>
+
+            <br>
+
+            <i> Check your ticket price/s. </i>
+
+            <br>
+
+            <br>
+
+            <form>
+
+                <label> Type of Match </label>
+
+                <select class="form-select" id="matches">  
+
+                        <option value="1839"> Early Matches </option>
+
+                        <option value="2528"> Bracket Matches, Upper/Lower Finals, and Lower Semis </option>
+
+                        <option value="3220"> Grand Finals </option>
+
+                </select>
+
+                <br>
+
+                <label> Discounts? </label>
+
+                <select class="form-select" id="discounts">
+
+                    <option value="0.25"> PWD/Senior Citizen </option>
+    
+                    <option value="0"> Regular </option>
+
+                </select>
+
+                <br>
+                
+                <br>
+
+                <button type="button" onclick="ticket_price()"> TICKET PRICE </button>
+
+            </form>
+
+        </details>
+
+        <br>
+
+        <br>
+
+        <details style="color: white; text-align: center;">
+
+            <summary> Printing of Ticket </summary>
+
+            <br>
+
+            <i> Select your ticket/s. </i>
+
+            <br>
+
+            <br>
+
+            <img src="ticket.jpg" style="border-radius: 12px;">
+
+            <button type="button" onclick="ticket_emailed()"> Print Ticket </button>
+
+            <br>
+
+            <br>
+
+            <button type="button"> Buy More Tickets? </button>
+
+        </details>
+
+        <br>
+
+        <br>
+
+        <details style="color: white; text-align: center;">
+
+            <summary> Extra Information </summary>
+
+            <br>
+
+            <b> References: </b>
+
+            <br>
+
+            <p> Valorant Esports Staff. (2024, December 7). Masters Bangkok: Live Audience and Ticket Sale Information. Riot Games. <a href="https://valorantesports.com/en-US/news/masters-bangkok-live-audience-and-ticket-sale-information"> https://valorantesports.com/en-US/news/masters-bangkok-live-audience-and-ticket-sale-information </a> </p>
+
+            <br>
+
+            <p> <a href="https://www.xe.com/currencyconverter/convert/?Amount=1868&From=THB&To=PHP"> https://www.xe.com/currencyconverter/convert/?Amount=1868&From=THB&To=PHP </a> </p>
+
+            <br>
+
+            <p> haris99. (2018). PNG. pngtree. <a href="https://pngtree.com/freepng/ticket-logo-icon-design-template-vector-illustration_3698983.html"> https://pngtree.com/freepng/ticket-logo-icon-design-template-vector-illustration_3698983.html </a> </p>
+
+        </details>
+
+
+        <br>
+
+        <br>
+        
+        <script> /// JavaScript Events \\\
+
+            function ticket_price() {
+
+                var match=document.getElementById('matches').value;
+
+                var discount=document.getElementById('discounts').value;
+
+                var final_rate= match - (discount * match); 
+
+                window.alert ('The price of your ticket is ' + final_rate);
+
+            }
+
+            function ticket_emailed() {
+
+                window.alert ('The ticket will be sent to your email shortly.');
+
+            }
+
+        </script>
+
+    </div>
+    
+</body>
+
+</html>
